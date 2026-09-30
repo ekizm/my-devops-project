@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout
+      uses: actions/checkout@v2
     - name: Build container
       run: docker build -t real-devops-lab-app .
