@@ -1,0 +1,21 @@
+yaml
+
+name: First github Docker CI Action
+
+on:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout
+
+    - name: Build container
+      run: docker build -t real-devops-lab-app .
+
+
